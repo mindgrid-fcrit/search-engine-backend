@@ -1,0 +1,5 @@
+curl "http://localhost:3000/api/search?q=python+parallel+coding&alpha=0.7"
+[{"id":"44d6eacf-c011-4b43-aa38-155f086ef5cf","content":"Act as a Senior Python Developer and write an efficient function for parallel data processing using the 'concurrent.futures' library.","votes":95,"quality_score":5,"semantic_score":0.656118869781494,"final_rank":0.609283208847046}]
+
+curl -X POST https://search-engine-backend-mocha.vercel.app/api/prompts -H "Content-Type: application/json" -d "{\"text\":\"Compose a captivating narrative hook for a fantasy novel based on a lost artifact and a reluctant hero.\", \"category\":\"Creative\", \"votes\":50, \"quality_score\":4}"
+
