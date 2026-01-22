@@ -110,23 +110,25 @@ app.get('/api/search', async (req, res) => {
 const textModel = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 /**
- * 1. GET DESCRIPTION & METADATA
- * Use this to show info to the user WITHOUT revealing the secret prompt.
+ * GET /api/prompts
+ * Fetches ALL prompts from the database for the list view.
+ * Privacy: Does NOT return 'content' or 'embedding'.
  */
-app.get('/api/prompts/:id/details', async (req, res) => {
+app.get('/api/prompts', async (req, res) => {
   try {
-    const { id } = req.params;
-
-    // We explicitly NOT select 'content' or 'embedding' for privacy
-    const { data: prompt, error } = await supabase
+    // 1. Fetch only safe columns from Supabase
+    const { data, error } = await supabase
       .from('prompts')
-      .select('id, category, description, votes, quality_score, created_at')
-      .eq('id', id)
-      .single();
+      .select('id, description, category, votes, quality_score, created_at')
+      .order('created_at', { ascending: false }); // Newest first
 
-    if (error || !prompt) return res.status(404).json({ error: "Prompt not found" });
+    if (error) throw error;
 
-    res.status(200).json(prompt);
+    // 2. Return the list (User sees description, but prompt is hidden)
+    res.status(200).json({
+      count: data.length,
+      prompts: data
+    });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
