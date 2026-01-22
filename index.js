@@ -106,5 +106,75 @@ app.get('/api/search', async (req, res) => {
   }
 });
 
+// Initialize the Text model for description and execution
+const textModel = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+/**
+ * 1. GET DESCRIPTION & METADATA
+ * Use this to show info to the user WITHOUT revealing the secret prompt.
+ */
+app.get('/api/prompts/:id/details', async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    // We explicitly NOT select 'content' or 'embedding' for privacy
+    const { data: prompt, error } = await supabase
+      .from('prompts')
+      .select('id, category, description, votes, quality_score, created_at')
+      .eq('id', id)
+      .single();
+
+    if (error || !prompt) return res.status(404).json({ error: "Prompt not found" });
+
+    res.status(200).json(prompt);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+/**
+ * 2. EXECUTE PROMPT (The "Black Box")
+ * User sends data -> Server joins it with secret prompt -> User gets AI result.
+ */
+app.post('/api/prompts/:id/execute', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { userInput } = req.body; // The data the user wants processed
+
+    if (!userInput) return res.status(400).json({ error: "User input is required" });
+
+    // Fetch the secret prompt content from DB
+    const { data: prompt, error } = await supabase
+      .from('prompts')
+      .select('content')
+      .eq('id', id)
+      .single();
+
+    if (error || !prompt) return res.status(404).json({ error: "Prompt not found" });
+
+    // Combine your secret prompt with the user's data
+    const finalInstruction = `
+      System Instructions: ${prompt.content}
+      
+      User Data to process: ${userInput}
+      
+      Please provide the result based on the instructions above.
+    `;
+
+    // Execute via Gemini
+    const result = await textModel.generateContent(finalInstruction);
+    const response = await result.response;
+    
+    // Return only the text result
+    res.status(200).json({
+      success: true,
+      output: response.text()
+    });
+
+  } catch (err) {
+    res.status(500).json({ error: "Execution failed: " + err.message });
+  }
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 Engine live at port ${PORT}`));
