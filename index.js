@@ -107,7 +107,7 @@ app.get('/api/search', async (req, res) => {
 });
 
 // Initialize the Text model for description and execution
-const textModel = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+const textModel = genAI.getGenerativeModel({ model: "gemini-2.5-pro" });
 
 /**
  * GET /api/prompts
