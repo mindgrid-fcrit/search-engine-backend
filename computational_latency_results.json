@@ -1,0 +1,162 @@
+[
+  {
+    "query": "How to optimize Python code?",
+    "cache": {
+      "is_hit": true,
+      "fetch_time_ms": 316.19
+    },
+    "performance": {
+      "db_side_latency_ms": 377.26,
+      "server_side_latency_ms": 807.75,
+      "speed_improvement_factor": "2.14x"
+    },
+    "data_transfer": {
+      "rows_fetched_from_db": 11,
+      "results_returned_to_user": 5
+    }
+  },
+  {
+    "query": "Help me write a professional email",
+    "cache": {
+      "is_hit": false,
+      "fetch_time_ms": 950
+    },
+    "performance": {
+      "db_side_latency_ms": 347.63,
+      "server_side_latency_ms": 498.5,
+      "speed_improvement_factor": "1.43x"
+    },
+    "data_transfer": {
+      "rows_fetched_from_db": 11,
+      "results_returned_to_user": 5
+    }
+  },
+  {
+    "query": "Creative story about a lost king",
+    "cache": {
+      "is_hit": false,
+      "fetch_time_ms": 1213.69
+    },
+    "performance": {
+      "db_side_latency_ms": 302.27,
+      "server_side_latency_ms": 695.43,
+      "speed_improvement_factor": "2.3x"
+    },
+    "data_transfer": {
+      "rows_fetched_from_db": 11,
+      "results_returned_to_user": 5
+    }
+  },
+  {
+    "query": "Excel formulas for complex math",
+    "cache": {
+      "is_hit": false,
+      "fetch_time_ms": 855.96
+    },
+    "performance": {
+      "db_side_latency_ms": 321.28,
+      "server_side_latency_ms": 733.33,
+      "speed_improvement_factor": "2.28x"
+    },
+    "data_transfer": {
+      "rows_fetched_from_db": 11,
+      "results_returned_to_user": 5
+    }
+  },
+  {
+    "query": "Debugging javascript memory leaks",
+    "cache": {
+      "is_hit": false,
+      "fetch_time_ms": 953.98
+    },
+    "performance": {
+      "db_side_latency_ms": 317.76,
+      "server_side_latency_ms": 749.89,
+      "speed_improvement_factor": "2.36x"
+    },
+    "data_transfer": {
+      "rows_fetched_from_db": 11,
+      "results_returned_to_user": 5
+    }
+  },
+  {
+    "query": "Career advice for junior developers",
+    "cache": {
+      "is_hit": false,
+      "fetch_time_ms": 852.65
+    },
+    "performance": {
+      "db_side_latency_ms": 325.51,
+      "server_side_latency_ms": 529.96,
+      "speed_improvement_factor": "1.63x"
+    },
+    "data_transfer": {
+      "rows_fetched_from_db": 11,
+      "results_returned_to_user": 5
+    }
+  },
+  {
+    "query": "Latex code for tables",
+    "cache": {
+      "is_hit": false,
+      "fetch_time_ms": 1059.61
+    },
+    "performance": {
+      "db_side_latency_ms": 404.61,
+      "server_side_latency_ms": 563.68,
+      "speed_improvement_factor": "1.39x"
+    },
+    "data_transfer": {
+      "rows_fetched_from_db": 11,
+      "results_returned_to_user": 5
+    }
+  },
+  {
+    "query": "Marketing strategy for software",
+    "cache": {
+      "is_hit": false,
+      "fetch_time_ms": 865.68
+    },
+    "performance": {
+      "db_side_latency_ms": 320.88,
+      "server_side_latency_ms": 574.43,
+      "speed_improvement_factor": "1.79x"
+    },
+    "data_transfer": {
+      "rows_fetched_from_db": 11,
+      "results_returned_to_user": 5
+    }
+  },
+  {
+    "query": "Interpret a dream about flying",
+    "cache": {
+      "is_hit": false,
+      "fetch_time_ms": 949.91
+    },
+    "performance": {
+      "db_side_latency_ms": 333.58,
+      "server_side_latency_ms": 633.47,
+      "speed_improvement_factor": "1.9x"
+    },
+    "data_transfer": {
+      "rows_fetched_from_db": 11,
+      "results_returned_to_user": 5
+    }
+  },
+  {
+    "query": "Side scrolling game logic",
+    "cache": {
+      "is_hit": false,
+      "fetch_time_ms": 951.97
+    },
+    "performance": {
+      "db_side_latency_ms": 385.24,
+      "server_side_latency_ms": 582.08,
+      "speed_improvement_factor": "1.51x"
+    },
+    "data_transfer": {
+      "rows_fetched_from_db": 11,
+      "results_returned_to_user": 5
+    }
+  }
+]

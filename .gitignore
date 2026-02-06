@@ -1,3 +1,12 @@
 .env
 node_modules/
 .cmds.txt
+.benchmark_results_batch_0.json
+.benchmark_results.json
+.computational_latency_results.json
+.computational-latency-test.json
+.final_benchmark_30_cases.json
+.keyword_benchmark_results.json
+.keyword_benchmark_results.json
+.reindex-prompts.js
+.test-search-engine.js

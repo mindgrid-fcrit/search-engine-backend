@@ -1,0 +1,152 @@
+[
+  {
+    "keyword": "Python",
+    "found": {
+      "semantic": 5,
+      "keyword": 0
+    },
+    "performance": {
+      "semantic_db_ms": 444.54,
+      "keyword_db_ms": 358.32
+    },
+    "cache": {
+      "is_hit": true,
+      "api_time_ms": 340.77
+    }
+  },
+  {
+    "keyword": "Email",
+    "found": {
+      "semantic": 0,
+      "keyword": 0
+    },
+    "performance": {
+      "semantic_db_ms": 1729.21,
+      "keyword_db_ms": 281.02
+    },
+    "cache": {
+      "is_hit": false,
+      "api_time_ms": 1367.28
+    }
+  },
+  {
+    "keyword": "Dream",
+    "found": {
+      "semantic": 0,
+      "keyword": 0
+    },
+    "performance": {
+      "semantic_db_ms": 363.25,
+      "keyword_db_ms": 283.11
+    },
+    "cache": {
+      "is_hit": false,
+      "api_time_ms": 1222.05
+    }
+  },
+  {
+    "keyword": "LaTeX",
+    "found": {
+      "semantic": 0,
+      "keyword": 0
+    },
+    "performance": {
+      "semantic_db_ms": 764.42,
+      "keyword_db_ms": 270.88
+    },
+    "cache": {
+      "is_hit": false,
+      "api_time_ms": 1111.18
+    }
+  },
+  {
+    "keyword": "Fantasy",
+    "found": {
+      "semantic": 0,
+      "keyword": 0
+    },
+    "performance": {
+      "semantic_db_ms": 375,
+      "keyword_db_ms": 269.32
+    },
+    "cache": {
+      "is_hit": false,
+      "api_time_ms": 1207.81
+    }
+  },
+  {
+    "keyword": "Game",
+    "found": {
+      "semantic": 0,
+      "keyword": 0
+    },
+    "performance": {
+      "semantic_db_ms": 358.53,
+      "keyword_db_ms": 268.41
+    },
+    "cache": {
+      "is_hit": false,
+      "api_time_ms": 1112.24
+    }
+  },
+  {
+    "keyword": "Bugs",
+    "found": {
+      "semantic": 0,
+      "keyword": 0
+    },
+    "performance": {
+      "semantic_db_ms": 362.41,
+      "keyword_db_ms": 277.56
+    },
+    "cache": {
+      "is_hit": false,
+      "api_time_ms": 1132.36
+    }
+  },
+  {
+    "keyword": "Parallel",
+    "found": {
+      "semantic": 0,
+      "keyword": 0
+    },
+    "performance": {
+      "semantic_db_ms": 363.95,
+      "keyword_db_ms": 285.77
+    },
+    "cache": {
+      "is_hit": false,
+      "api_time_ms": 1280.22
+    }
+  },
+  {
+    "keyword": "Excel",
+    "found": {
+      "semantic": 0,
+      "keyword": 0
+    },
+    "performance": {
+      "semantic_db_ms": 385.12,
+      "keyword_db_ms": 277.84
+    },
+    "cache": {
+      "is_hit": false,
+      "api_time_ms": 1109.57
+    }
+  },
+  {
+    "keyword": "Career",
+    "found": {
+      "semantic": 0,
+      "keyword": 0
+    },
+    "performance": {
+      "semantic_db_ms": 374.01,
+      "keyword_db_ms": 282.28
+    },
+    "cache": {
+      "is_hit": false,
+      "api_time_ms": 1103.87
+    }
+  }
+]

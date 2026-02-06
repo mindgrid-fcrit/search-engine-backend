@@ -1,0 +1,132 @@
+[
+  {
+    "query": "How to optimize Python code?",
+    "metrics": {
+      "embedding_latency_ms": "779.95",
+      "semantic_db_latency_ms": "1868.58",
+      "keyword_db_latency_ms": "454.07",
+      "total_semantic_latency_ms": "2648.53"
+    },
+    "results": {
+      "semantic_top_id": "87d26a62-b52b-4bb4-ad8f-ef8411c37af3",
+      "keyword_top_id": "none"
+    }
+  },
+  {
+    "query": "Help me write a professional email",
+    "metrics": {
+      "embedding_latency_ms": "412.52",
+      "semantic_db_latency_ms": "393.24",
+      "keyword_db_latency_ms": "387.98",
+      "total_semantic_latency_ms": "805.76"
+    },
+    "results": {
+      "semantic_top_id": "a28f8115-80fe-4bce-b9cf-55ac5d55f159",
+      "keyword_top_id": "none"
+    }
+  },
+  {
+    "query": "Creative story about a lost king",
+    "metrics": {
+      "embedding_latency_ms": "298.89",
+      "semantic_db_latency_ms": "552.43",
+      "keyword_db_latency_ms": "308.54",
+      "total_semantic_latency_ms": "851.32"
+    },
+    "results": {
+      "semantic_top_id": "a1c0492b-9221-4dec-9a17-34df6553ed8f",
+      "keyword_top_id": "none"
+    }
+  },
+  {
+    "query": "Excel formulas for complex math",
+    "metrics": {
+      "embedding_latency_ms": "313.47",
+      "semantic_db_latency_ms": "401.06",
+      "keyword_db_latency_ms": "313.80",
+      "total_semantic_latency_ms": "714.53"
+    },
+    "results": {
+      "semantic_top_id": "27e051eb-96f9-47a5-a031-21aff407d8f0",
+      "keyword_top_id": "none"
+    }
+  },
+  {
+    "query": "Debugging javascript memory leaks",
+    "metrics": {
+      "embedding_latency_ms": "261.38",
+      "semantic_db_latency_ms": "296.85",
+      "keyword_db_latency_ms": "322.30",
+      "total_semantic_latency_ms": "558.23"
+    },
+    "results": {
+      "semantic_top_id": "bd3d0781-9773-4404-90d8-31657ffae3c1",
+      "keyword_top_id": "none"
+    }
+  },
+  {
+    "query": "Career advice for junior developers",
+    "metrics": {
+      "embedding_latency_ms": "251.37",
+      "semantic_db_latency_ms": "300.01",
+      "keyword_db_latency_ms": "278.18",
+      "total_semantic_latency_ms": "551.38"
+    },
+    "results": {
+      "semantic_top_id": "ead57cba-e01e-4413-b21e-5b9adc4a46ca",
+      "keyword_top_id": "none"
+    }
+  },
+  {
+    "query": "Latex code for tables",
+    "metrics": {
+      "embedding_latency_ms": "330.88",
+      "semantic_db_latency_ms": "408.91",
+      "keyword_db_latency_ms": "305.91",
+      "total_semantic_latency_ms": "739.79"
+    },
+    "results": {
+      "semantic_top_id": "c37047a4-957a-41b7-ac64-157be9ad764c",
+      "keyword_top_id": "none"
+    }
+  },
+  {
+    "query": "Marketing strategy for software",
+    "metrics": {
+      "embedding_latency_ms": "306.58",
+      "semantic_db_latency_ms": "306.86",
+      "keyword_db_latency_ms": "398.72",
+      "total_semantic_latency_ms": "613.43"
+    },
+    "results": {
+      "semantic_top_id": "a28f8115-80fe-4bce-b9cf-55ac5d55f159",
+      "keyword_top_id": "none"
+    }
+  },
+  {
+    "query": "Interpret a dream about flying",
+    "metrics": {
+      "embedding_latency_ms": "303.52",
+      "semantic_db_latency_ms": "322.01",
+      "keyword_db_latency_ms": "408.71",
+      "total_semantic_latency_ms": "625.52"
+    },
+    "results": {
+      "semantic_top_id": "7748b96d-97d8-450d-85ab-ef3062189e77",
+      "keyword_top_id": "none"
+    }
+  },
+  {
+    "query": "Side scrolling game logic",
+    "metrics": {
+      "embedding_latency_ms": "309.16",
+      "semantic_db_latency_ms": "407.27",
+      "keyword_db_latency_ms": "328.32",
+      "total_semantic_latency_ms": "716.43"
+    },
+    "results": {
+      "semantic_top_id": "d9ae5505-f048-4a23-9323-9b4809442672",
+      "keyword_top_id": "none"
+    }
+  }
+]

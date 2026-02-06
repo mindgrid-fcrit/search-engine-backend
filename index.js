@@ -12,7 +12,10 @@ app.use(express.json());
 // Clients
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "text-embedding-004" });
+
+/** * MODEL UPDATED: Transitioned from text-embedding-004 to gemini-embedding-001
+ */
+const model = genAI.getGenerativeModel({ model: "gemini-embedding-001" });
 
 /**
  * CORE HELPER: getVector
@@ -34,9 +37,11 @@ async function getVector(text, useCache = false) {
   }
 
   // 2. Generate Embedding
+  // TaskType and outputDimensionality added for compatibility with embedding-001
   const result = await model.embedContent({
     content: { parts: [{ text: cleanText }] },
-    outputDimensionality: 768,
+    taskType: useCache ? "RETRIEVAL_QUERY" : "RETRIEVAL_DOCUMENT",
+    outputDimensionality: 768, 
   });
   const embedding = result.embedding.values;
 
@@ -107,24 +112,22 @@ app.get('/api/search', async (req, res) => {
 });
 
 // Initialize the Text model for description and execution
-const textModel = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+// Using 1.5-flash as it is the stable current version
+const textModel = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 /**
  * GET /api/prompts
  * Fetches ALL prompts from the database for the list view.
- * Privacy: Does NOT return 'content' or 'embedding'.
  */
 app.get('/api/prompts', async (req, res) => {
   try {
-    // 1. Fetch only safe columns from Supabase
     const { data, error } = await supabase
       .from('prompts')
       .select('id, description, category, votes, quality_score, created_at')
-      .order('created_at', { ascending: false }); // Newest first
+      .order('created_at', { ascending: false });
 
     if (error) throw error;
 
-    // 2. Return the list (User sees description, but prompt is hidden)
     res.status(200).json({
       count: data.length,
       prompts: data
@@ -135,17 +138,15 @@ app.get('/api/prompts', async (req, res) => {
 });
 
 /**
- * 2. EXECUTE PROMPT (The "Black Box")
- * User sends data -> Server joins it with secret prompt -> User gets AI result.
+ * 2. EXECUTE PROMPT
  */
 app.post('/api/prompts/:id/execute', async (req, res) => {
   try {
     const { id } = req.params;
-    const { userInput } = req.body; // The data the user wants processed
+    const { userInput } = req.body;
 
     if (!userInput) return res.status(400).json({ error: "User input is required" });
 
-    // Fetch the secret prompt content from DB
     const { data: prompt, error } = await supabase
       .from('prompts')
       .select('content')
@@ -154,7 +155,6 @@ app.post('/api/prompts/:id/execute', async (req, res) => {
 
     if (error || !prompt) return res.status(404).json({ error: "Prompt not found" });
 
-    // Combine your secret prompt with the user's data
     const finalInstruction = `
       System Instructions: ${prompt.content}
       
@@ -163,11 +163,9 @@ app.post('/api/prompts/:id/execute', async (req, res) => {
       Please provide the result based on the instructions above.
     `;
 
-    // Execute via Gemini
     const result = await textModel.generateContent(finalInstruction);
     const response = await result.response;
     
-    // Return only the text result
     res.status(200).json({
       success: true,
       output: response.text()

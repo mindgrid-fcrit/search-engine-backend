@@ -1,0 +1,122 @@
+[
+  {
+    "query": "python performance",
+    "metrics": {
+      "semantic_db_ms": 345.39,
+      "keyword_db_ms": 277.04,
+      "embedding_ms": 256.86
+    },
+    "success": {
+      "semantic": true,
+      "keyword": null
+    }
+  },
+  {
+    "query": "javascript debug",
+    "metrics": {
+      "semantic_db_ms": 417.74,
+      "keyword_db_ms": 301.62,
+      "embedding_ms": 260.09
+    },
+    "success": {
+      "semantic": true,
+      "keyword": null
+    }
+  },
+  {
+    "query": "sql join optimization",
+    "metrics": {
+      "semantic_db_ms": 337.12,
+      "keyword_db_ms": 249.8,
+      "embedding_ms": 246.88
+    },
+    "success": {
+      "semantic": true,
+      "keyword": null
+    }
+  },
+  {
+    "query": "react state hooks",
+    "metrics": {
+      "semantic_db_ms": 376.17,
+      "keyword_db_ms": 279.13,
+      "embedding_ms": 247.1
+    },
+    "success": {
+      "semantic": true,
+      "keyword": null
+    }
+  },
+  {
+    "query": "regex email extract",
+    "metrics": {
+      "semantic_db_ms": 286.51,
+      "keyword_db_ms": 257.42,
+      "embedding_ms": 260.81
+    },
+    "success": {
+      "semantic": true,
+      "keyword": null
+    }
+  },
+  {
+    "query": "html game logic",
+    "metrics": {
+      "semantic_db_ms": 276.62,
+      "keyword_db_ms": 254.3,
+      "embedding_ms": 268.55
+    },
+    "success": {
+      "semantic": true,
+      "keyword": null
+    }
+  },
+  {
+    "query": "fantasy worldbuilding",
+    "metrics": {
+      "semantic_db_ms": 280.18,
+      "keyword_db_ms": 269.98,
+      "embedding_ms": 235.13
+    },
+    "success": {
+      "semantic": true,
+      "keyword": null
+    }
+  },
+  {
+    "query": "professional outreach",
+    "metrics": {
+      "semantic_db_ms": 274.91,
+      "keyword_db_ms": 302.86,
+      "embedding_ms": 271.5
+    },
+    "success": {
+      "semantic": true,
+      "keyword": null
+    }
+  },
+  {
+    "query": "poetry haiku",
+    "metrics": {
+      "semantic_db_ms": 404.45,
+      "keyword_db_ms": 256.2,
+      "embedding_ms": 235.4
+    },
+    "success": {
+      "semantic": true,
+      "keyword": null
+    }
+  },
+  {
+    "query": "script dialogue",
+    "metrics": {
+      "semantic_db_ms": 303,
+      "keyword_db_ms": 277.04,
+      "embedding_ms": 241.03
+    },
+    "success": {
+      "semantic": true,
+      "keyword": null
+    }
+  }
+]
